@@ -47,18 +47,16 @@ const Dashboard = () => {
               alignItems: "center",
               cursor: "pointer",
               background: "transparent",
-              padding:"10px",
-              borderRadius:"6px"
-
-
+              padding: "10px",
+              borderRadius: "6px",
             }}
             whileHover={{
               background: "#fff",
               color: "#333",
             }}
             exit={{
-                color: "#fff",
-                background: "transparent",
+              color: "#fff",
+              background: "transparent",
             }}
             className="mt15"
             onClick={() => navigate("/dashboard")}
@@ -74,38 +72,34 @@ const Dashboard = () => {
               alignItems: "center",
               cursor: "pointer",
               background: "transparent",
-              padding:"10px",
-              borderRadius:"6px"
-
-
+              padding: "10px",
+              borderRadius: "6px",
             }}
             whileHover={{
               background: "#fff",
               color: "#333",
             }}
             exit={{
-                color: "#fff",
-                background: "transparent",
+              color: "#fff",
+              background: "transparent",
             }}
             className="mt15"
             onClick={() => navigate("/dashboard")}
           >
-            
             <p
-            style={{
-              display: "flex",
-              alignItems: "center",
-              cursor: "pointer",
-            }}
-          >
-            <Setting size={16} />{" "}
-            <span style={{ marginLeft: "5px", marginRight: "15px" }}>
-              Settings
-            </span>
-            coming...
-          </p> </motion.p>
-
-      
+              style={{
+                display: "flex",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
+              <Setting size={16} />{" "}
+              <span style={{ marginLeft: "5px", marginRight: "15px" }}>
+                Settings
+              </span>
+              coming...
+            </p>{" "}
+          </motion.p>
         </div>
         <div
           style={{

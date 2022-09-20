@@ -29,7 +29,7 @@ const navigate= useNavigate()
               minHeight: "300px",
               minWidth: "300px",
               background: "#fff",
-              boxShadow: "3px 3px 4px 4px #ddd",
+              boxShadow: "3px 3px 4px 1px #ddd",
               borderRadius: "8px",
               padding: "10px",
               position: "relative",

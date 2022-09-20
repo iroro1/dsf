@@ -6,10 +6,8 @@
 }
 .bgAuth{
   background:url(./assets//images/loginBg.jpg);
-  object-position: left;
+  object-position: top;
   object-fit: contain;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 .loginBg{
   background: #00000065;
