@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+const navigate= useNavigate()
+  const submit=()=>{
+    navigate("/dashboard")
+  }
   return (
     <div className="bgAuth">
       <div
@@ -32,7 +36,7 @@ const Login = () => {
             }}
           >
             <div style={{ marginBottom: "15px" }}>
-              <h1 style={{ marginBottom: "2px", color: "red" }}>DSF</h1>
+              <h1 style={{ marginBottom: "2px",}}>DSF</h1>
               <small>Consultants Portal</small>
             </div>
             <h3
@@ -42,13 +46,12 @@ const Login = () => {
                 marginBottom: "20px",
                 borderBottom: "1px solid #eee",
                 paddingBottom: "10px",
-                color: "red",
               }}
             >
               Login
             </h3>
 
-            <form className="mx-10">
+            <form onSubmit={submit} className="mx-10">
               <div className="form-group-col  mb15">
                 <label className="form-label" htmlFor="email">
                   Email

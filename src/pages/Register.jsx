@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
+    const navigate= useNavigate()
+  const submit=()=>{
+    navigate("/")
+  }
   return (
     <div className="bgAuth">
       <div
@@ -47,7 +51,7 @@ const Register = () => {
               Register
             </h3>
 
-            <form className="mx-10">
+            <form onSubmit={submit} className="mx-10">
               <div className="form-group-col  mb15">
                 <label className="form-label" htmlFor="email">
                   Firstname
