@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowLeft2, ArrowRight2, Dash, Setting } from "iconsax-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
@@ -33,7 +33,7 @@ const Dashboard = () => {
             position: "absolute",
             top: "20px",
             right: sideOpen ? "-17px" : "-33px",
-            background: "#fff",
+            background: sideOpen?"#fff": "#6B0F1A",
             border: "2px solid #ddd",
             boxShadow:"3px -3px -3px #6B0F1A",
             borderRadius: "50%",
@@ -46,7 +46,7 @@ const Dashboard = () => {
           {sideOpen ? (
             <ArrowLeft2 onClick={() => setSideOpen(false)} size={18} />
           ) : (
-            <ArrowRight2 onClick={() => setSideOpen(true)} size={18} />
+            <ArrowRight2 color={!sideOpen&&"#fff"} onClick={() => setSideOpen(true)} size={18} />
           )}
         </span>
         {sideOpen && (
@@ -69,23 +69,16 @@ const Dashboard = () => {
               className="mt15 textWhite"
             >
               <motion.p
-                animate={{
+                style={{
                   display: "flex",
                   alignItems: "center",
                   cursor: "pointer",
-                  background: pathName.includes("dashboard")?"#fff": "transparent",
-                  color: pathName.includes("dashboard") ?"#333":"#fff",
+                  background: pathName===("/dashboard")?"#fff": "transparent",
+                  color: pathName===("/dashboard") ?"#333":"#fff",
                   padding: "10px",
                   borderRadius: "6px",
                 }}
-                whileHover={{
-                  background: "#fff",
-                  color: "#333",
-                }}
-                exit={{
-                  color: "#fff",
-                  background: "transparent",
-                }}
+      
                 className="mt15"
                 onClick={() => navigate("/dashboard")}
               >
@@ -95,23 +88,16 @@ const Dashboard = () => {
               </motion.p>
 
               <motion.p
-                animate={{
+                style={{
                   display: "flex",
                   alignItems: "center",
                   cursor: "pointer",
-                  background: pathName.includes("settings") ?"#fff": "transparent",
-                  color: pathName.includes("settings")? "#333":"#fff",
+                  background: pathName===("/dashboard/settings") ?"#fff": "transparent",
+                  color: pathName===("/dashboard/settings")? "#333":"#fff",
                   padding: "10px",
                   borderRadius: "6px",
                 }}
-                whileHover={{
-                  background: "#fff",
-                  color: "#333",
-                }}
-                exit={{
-                  color: "#fff",
-                  background: "transparent",
-                }}
+          
                 className="mt15"
                 onClick={() => navigate("settings")}
               >
