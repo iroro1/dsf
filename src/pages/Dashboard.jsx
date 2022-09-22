@@ -74,7 +74,7 @@ const Dashboard = () => {
                   alignItems: "center",
                   cursor: "pointer",
                   background: pathName.includes("dashboard")?"#fff": "transparent",
-                  color: pathName.includes("dashboard") && "#333",
+                  color: pathName.includes("dashboard") ?"#333":"#fff",
                   padding: "10px",
                   borderRadius: "6px",
                 }}
@@ -100,7 +100,7 @@ const Dashboard = () => {
                   alignItems: "center",
                   cursor: "pointer",
                   background: pathName.includes("settings") ?"#fff": "transparent",
-                  color: pathName.includes("settings") && "#333",
+                  color: pathName.includes("settings")? "#333":"#fff",
                   padding: "10px",
                   borderRadius: "6px",
                 }}
